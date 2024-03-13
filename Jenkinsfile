@@ -7,26 +7,20 @@ pipeline {
                 echo 'Hello World'
             }
         }
-    }
-     stages {
         stage('2') {
             steps {
                 echo 'Hello World'
             }
         }
-    }
-     stages {
         stage('3') {
             steps {
                 echo 'Hello World'
             }
         }
     }
-     stages {
-        stage('4') {
-            steps {
-                echo 'Hello World'
-            }
+    post{
+        always {
+            emailext body: 'LOL', subject: 'LOL', to: 'sachin1@gmail.com'
         }
     }
 }
